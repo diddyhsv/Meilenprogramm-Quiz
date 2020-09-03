@@ -7,7 +7,7 @@
 
 
 var currentQuestion = 2; //
-
+var flyingblue = okplus = skymiles = royalclub = aadvantage = eurobonus = flyingclub = trueblue = norwegianreward = executiveclub = asianaclub = millemiglia = finnairplus = qantas = milesandbonus = milesandsmiles = aeroflotbonus = milesandmore = 0;
 
 /* 
 	name: startQuiz
@@ -144,10 +144,91 @@ function getEndingSentence() {
 	desc: Collects information and outputs it to the HTML page.
     parameters: none
     returns: none
+    .
 */
 function setEndingSentence() {
 	var personalityResults = getEndingSentence();
+	var splitresult = personalityResults.split(",");
+	var arr = calcResults(splitresult);
+	console.log("ARR");
+	console.log(arr);
+	arr = arr.sort(function (a,b){
+        if (a.slice(-2) > b.slice(-2)) return -1;
+        if (a.slice(-2) < b.slice(-2)) return 1;
+        return 0;	});
+	result = resultoutput(arr);
     document.getElementById("results_screen").className = "";
-	document.getElementById("generated_text").innerHTML = personalityResults; 
+	document.getElementById("generated_text").innerHTML = result;
 
-} 
+}
+
+function resultoutput(arra){
+    var endresultstring = "";
+    for(var i = 0; i < arra.length; i++){
+        endresultstring += arra[i]  + '%<br>';
+    }
+    return endresultstring;
+}
+
+function calcResults(res) {
+    for(var i = 0; i < res.length; i++){
+        if(res[i].includes("Miles&More")){
+            milesandmore += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Miles+Bonus")){
+            milesandbonus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Asiana Club")){
+            asianaclub += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Miles&Smiles")){
+            milesandsmiles += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("EuroBonus")){
+            eurobonus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Flying Blue")){
+            flyingblue += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Aeroflot Bonus")){
+            aeroflotbonus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("OK Plus")){
+            okplus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("MilleMiglia")){
+            millemiglia += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("SkyMiles")){
+            skymiles += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Executive Club")){
+            executiveclub += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("AAdvantage")){
+            aadvantage += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Finnair Plus")){
+            finnairplus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Qantas")){
+            qantas += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Royal Club")){
+            royalclub += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Flying Club")){
+            flyingclub += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("TrueBlue")){
+            trueblue += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Norwegian Reward")){
+            norwegianreward += parseInt(res[i].slice(-2));
+        }
+    }
+    var lh = "Miles&More: " + milesandmore;
+    var a6 = "Aegean Miles+Bonus: " + milesandbonus;
+    var as = "Asiana Club: " + asianaclub;
+    var tk = "Turkish Airlines Miles&Smiles: " + milesandsmiles;
+    var sa = "SAS EuroBonus: " + eurobonus;
+    var af = "Flying Blue: " + flyingblue;
+    var sv = "Aeroflot Bonus: " + aeroflotbonus;
+    var ok = "OK Plus: " + okplus;
+    var az = "Alitalia MilleMiglia: " + millemiglia;
+    var dl = "Delta SkyMiles: " + skymiles;
+    var ba = "British Airways Executive Club: " + executiveclub;
+    var aa = "American Airlines AAdvantage: " + milesandmore;
+    var ay = "Finnair Plus: " + finnairplus;
+    var qa = "Qantas: " + qantas;
+    var rj = "Royal Jordanian Royal Club: " + royalclub;
+    var vz = "Virgin Flying Club: " + flyingclub;
+    var jb = "JetBlue TrueBlue: " + trueblue;
+    var no = "Norwegian Reward: " + finnairplus;
+    var programs = [lh, a6, as, tk, sa, af, sv, ok, az, dl, ba, aa, ay, qa, rj, vz, jb, no];
+    console.log(programs);
+    return programs;
+}
