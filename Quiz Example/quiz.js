@@ -167,6 +167,32 @@ function resultoutput(arra){
     for(var i = 0; i < arra.length; i++){
         endresultstring += arra[i]  + '%<br>';
     }
+    endresultstring += '<br><br><br>'
+    if(arra[0].includes("Flying Blue")){
+        endresultstring += "Trotz der ganzen Änderungen, die Flying Blue vorgenommen hat, ist es dennoch ein gutes Programm für all jene, die öfter mit SkyTeam reisen. Auf den ersten Blick ist es vielleicht kompliziert oder ungewohnt, seine XP zu berechnen. Aber eigentlich ist es doch ganz logisch und man hat schnell den Überblick. Die initiale Qualifizierung ist etwas hart (aber auch machbar), der Statuserhalt dafür wirklich recht einfach. Gerade in Kombination mit dem Übertrag von Experience Punkten ins nächste Jahr spricht das auf lange Sicht für die Teilnahem am Flying Blue Programm.";
+    }else if(arra[0].includes("OK Plus")){
+        endresultstring += "OK Plus ist ein tolles Programm, speziell, wenn ihr plant, den Status über Segmente zu erfliegen. Nur 30 Segmente ist ein guter Deal. Auch, wenn 6 davon mit der Airline selbst durchgeführt werden müssen. Und das könnte der Knackpunkt sein. Wenn ihr nämlich überhaupt nie mit Czech Airlines fliegt und die Segmente quasi erzwingen müsst, ist es vielleicht schon nicht mehr ganz so interessant. Ein weiterer Nachteil ist, dass OK Plus nicht alle Flüge auch als Segmente für die Erreichung oder den Erhalt des Status zählt. Günstige Buchungsklassen von KLM oder Air France scheiden leider aus. Wenn ihr also viele kurze Strecken in Europa fliegt, diese aber mit den falschen Airlines, ist der Status vielleicht doch weiter weg, als gedacht.";
+    }else if(arra[0].includes("MilleMiglia")){
+        endresultstring += "Es gibt wahrlich einige Gründe, um das Vielfliegerprogramm von Alitalia zu meiden. Die finanzielle Situation der Airline. Oder die Tatsache, dass MilleMiglia jedes Jahr neu ausgerollt wird und mein keine Ahnung hat, welche Änderungen dies mit sich bringen wird. Aber wenn ihr zumindest einmal oder zweimal im Jahr mit SkyTeam Airlines in der Business Class fliegt (am besten natürlich mit Alitalia selbst) ist dies vermutlich der beste Weg, um zum SkyTeam Elite Plus Status zu gelangen.";
+    }else if(arra[0].includes("SkyMiles")){
+        endresultstring += "SkyMiles mag nicht das einfachste Programm sein, dass es gibt. Vor allem im Vergleich zu den Vielfliegerprogrammen, die man aus Europa kennt. Aber da es für Mitglieder, die außerhalb der USA wohnen, keine Voraussetzungen gibt, was die Qualifiyng Dollar betrifft, bietet SkyMiles auch eine angenehme Lösung, wenn es schnell zum Elite Plus gehen soll. Und die ganzen Vorteile, wie kostenlose Upgrades, das Rollover Programm und der Hertz Status machen es zu einem tollen Gesamtpaket.";
+    }else if(arra[0].includes("Executive Club")){
+        endresultstring += "Der Executive Club bietet eine sehr einfache Möglichkeit, mit wenigen Business- oder sogar First-Class-Flügen pro Jahr den Oneworld Sapphire Status zu erfliegen und auch dauerhaft zu behalten. Zusätzlich bietet das Programm auch einen Lifetime Gold Status nach 35.000 Tier Points an.";
+    }else if(arra[0].includes("AAdvantage")){
+        endresultstring += "Durch die Status Challenge ist AAdvantage aber immer noch ein interessanter Weg, um an den Sapphire Status zu kommen. Vor allem, wenn es schnell gehen soll. Die Option, den Status nun gegen eine Gebühr auch sofort nutzen zu können, gehört sicherlich zu den guten Neuerungen. Sollten bei euch eine Reihe von Flügen mit American Airlines anstehen, lohnt sich der Aufpreis bei der Challenge vielleicht, um diese Flüge schon etwas bequemer über die Bühne zu bringen.";
+    }else if(arra[0].includes("Finnair Plus")){
+        endresultstring += "Finnair Plus ist ein sehr attraktives Programm, besonders wenn ihr viel mit Finnair selber unterwegs seid. So sind die vier Upgrade-Voucher für jedes Jahr für Goldkunden gerade auf den längeren Strecken nach Helsinki eine coole Sache. Sehr angenehm ist aber auch, dass es keinen Zwang gibt, mit Finnair selber zu fliegen. Zwar ist der Status etwas schwieriger zu erfliegen als bei British Airways, jedoch solltet ihr im Auge behalten dass es ja auch nebenbei noch viele Punkte zum Einlösen sammelt.";
+    }else if(arra[0].includes("Miles+Bonus")){
+        endresultstring += "Früher war alles besser! Bis Ende 2014 konnte man den Gold Status mit 20.000 Statusmeilen innerhalb von 12 Monaten erreichen und er war dauerhaft gültig. Trotzdem sind 36.000 Statusmeilen + 6 Aegean-Flüge immer noch eine recht niedrige Hürde und vor allem die Requalifizierung mit 12.000 Statusmeilen + 4 Aegean-Flüge ist sehr einfach.";
+    }else if(arra[0].includes("Asiana Club")){
+        endresultstring += "40.000 Meilen innerhalb von 24 Monaten klingt nicht nach viel, trotzdem sollte man sich erst kurz vor dem ersten Flug registrieren um so auch die Statusgültigkeit zu maximieren. Seit 2018 sind für die Requalifizierung außerdem nur noch 30.000 Meilen in 2 Jahren notwendig, was das Ganze noch etwas einfacher macht.";
+    }else if(arra[0].includes("Miles&Smiles")){
+        endresultstring += "40.000 Statusmeilen innerhalb von 12 Monaten können durchaus eine große Hürde sein. Vor allem weil man selbst auf Flügen mit Turkish Airlines maximal 150% der Entfernungsmeilen als Status- und Prämienmeilen erhält. Dafür ist die Requalifizierung einfacher. Auch bei Miles & Smiles sind wieder die günstigen Lufthansa-Buchungsklassen (L, K, P) vom Meilensammeln ausgenommen. In anderen Buchungsklassen gibt es bis zu 200%.";
+    }else if(arra[0].includes("EuroBonus")){
+        endresultstring += "Eurobonus ist besonders interessant, wenn man viel in den günstigen Buchungsklassen bei Lufthansa unterwegs ist. In der Economy Class gibt es mit K, L, T immerhin noch 25% und in der Business Class mit P sogar 100% der Entfernungsmeilen als Basic Points. Außerdem ist Silver Status zum verschenken sicherlich kein Nachteil und Lifetime Gold nach 10 Jahren ebenfalls recht attraktiv. Wer 90.000 Basic Points in seinen 12 Monaten schafft, erreicht den Diamond Status und darf dann sogar eine Gold Card verschenken.";
+    }else if(arra[0].includes("Miles&More")){
+        endresultstring += "Viele Wege führen nach Rom und einige sind steiniger als andere. Trotzdem sollte man auch immer überlegen was man mit den gesammelten Meilen anfangen kann und wie viel man noch in Gebühren investieren muss.";
+    }
     return endresultstring;
 }
 
