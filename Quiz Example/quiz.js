@@ -190,7 +190,7 @@ function resultoutput(arra){
     }else if(arra[0].includes("Miles&More")){
         endresultstring += "Viele Wege führen nach Rom und einige sind steiniger als andere. Trotzdem sollte man auch immer überlegen was man mit den gesammelten Meilen anfangen kann und wie viel man noch in Gebühren investieren muss.";
     }
-    endresultstring += '<br><br>'
+    endresultstring += '<br>Andere Optionen:<br>'
     for(var i = 1; i < arra.length; i++){
         endresultstring += arra[i]  + '%<br>';
     }
