@@ -7,7 +7,7 @@
 
 
 var currentQuestion = 2; //
-var flyingblue = okplus = skymiles = royalclub = aadvantage = eurobonus = flyingclub = trueblue = norwegianreward = executiveclub = asianaclub = millemiglia = finnairplus = qantas = milesandbonus = milesandsmiles = aeroflotbonus = milesandmore = 0;
+var flyingblue = okplus = asiamiles = etihadguest = krisflyer = iberiaplus = skymiles = royalclub = aadvantage = eurobonus = flyingclub = trueblue = norwegianreward = executiveclub = asianaclub = millemiglia = finnairplus = qantas = milesandbonus = milesandsmiles = aeroflotbonus = milesandmore = 0;
 
 /* 
 	name: startQuiz
@@ -164,10 +164,7 @@ function setEndingSentence() {
 
 function resultoutput(arra){
     var endresultstring = "";
-    for(var i = 0; i < arra.length; i++){
-        endresultstring += arra[i]  + '%<br>';
-    }
-    endresultstring += '<br><br><br>'
+    endresultstring += arra[0]  + '%<br><br>';
     if(arra[0].includes("Flying Blue")){
         endresultstring += "Trotz der ganzen Änderungen, die Flying Blue vorgenommen hat, ist es dennoch ein gutes Programm für all jene, die öfter mit SkyTeam reisen. Auf den ersten Blick ist es vielleicht kompliziert oder ungewohnt, seine XP zu berechnen. Aber eigentlich ist es doch ganz logisch und man hat schnell den Überblick. Die initiale Qualifizierung ist etwas hart (aber auch machbar), der Statuserhalt dafür wirklich recht einfach. Gerade in Kombination mit dem Übertrag von Experience Punkten ins nächste Jahr spricht das auf lange Sicht für die Teilnahem am Flying Blue Programm.";
     }else if(arra[0].includes("OK Plus")){
@@ -193,6 +190,11 @@ function resultoutput(arra){
     }else if(arra[0].includes("Miles&More")){
         endresultstring += "Viele Wege führen nach Rom und einige sind steiniger als andere. Trotzdem sollte man auch immer überlegen was man mit den gesammelten Meilen anfangen kann und wie viel man noch in Gebühren investieren muss.";
     }
+    endresultstring += '<br><br>'
+    for(var i = 1; i < arra.length; i++){
+        endresultstring += arra[i]  + '%<br>';
+    }
+
     return endresultstring;
 }
 
@@ -234,6 +236,14 @@ function calcResults(res) {
             trueblue += parseInt(res[i].slice(-2));
         } else if(res[i].includes("Norwegian Reward")){
             norwegianreward += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Iberia Plus")){
+            iberiaplus += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Etihad Guest")){
+            etihadguest += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("KrisFlyer")){
+            krisflyer += parseInt(res[i].slice(-2));
+        } else if(res[i].includes("Asia Miles")){
+            asiamiles += parseInt(res[i].slice(-2));
         }
     }
     var lh = "Miles&More: " + milesandmore;
@@ -254,7 +264,11 @@ function calcResults(res) {
     var vz = "Virgin Flying Club: " + flyingclub;
     var jb = "JetBlue TrueBlue: " + trueblue;
     var no = "Norwegian Reward: " + finnairplus;
-    var programs = [lh, a6, as, tk, sa, af, sv, ok, az, dl, ba, aa, ay, qa, rj, vz, jb, no];
+    var ib = "Iberia Plus: " + iberiaplus;
+    var cx = "Asia Miles: " + asiamiles;
+    var sq = "KrisFlyer: " + krisflyer;
+    var ey = "Etihad Guest: " + etihadguest;
+    var programs = [lh, a6, as, tk, sa, af, sv, ok, az, dl, ba, aa, ay, qa, rj, vz, jb, no, cx, sq, ey, ib];
     console.log(programs);
     return programs;
 }
