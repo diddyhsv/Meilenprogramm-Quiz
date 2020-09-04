@@ -205,6 +205,8 @@ function resultoutput(arra){
         endresultstring += "Bei dem Programm der Russischen Airline bekommt man ohne Status erstmal leicht überdurchschnittliche Meilengutschriften, aber hat man einen Status erreicht, gibt es einen ordentlichen Bonus. Hat man z.B. den Gold-Status, gibt es auf den meisten Business-Class-Flügen der SkyTeam Allianz ganze 175%. Auch gut: Schon ab dem Silber-Status (25.000 Meilen oder 25 Segmente) gibt es auf jedem SkyTeam-Flug (auch im billigsten Tarif) ein kostenloses zusätzliches Gepäckstück.";
     }else if(arra[0].includes("Royal Club")){
         endresultstring += "Fliegt man viele Oneworld-Langstrecken, bietet Royal Jordanien ein gutes Programm an. Mit 65.000 Meilen erreicht man nämlich den Emerald-Status, u.a. mit First-Class-Loungezugang! Außerdem gibt es bei Flügen mit vielen Airlines 50% der Distanz in der Economy Class, und ganze 150% in der Business Class. Ein weitere Pluspunkt: Die Meilen verfallen nie.";
+    }else if(arra[0].includes("Flying Club")){
+        endresultstring += "Will man sich überhaupt nicht an eine Allianz binden, ist der Flying Club eine Alternative. Da Virgin Atlantic selber keiner Allianz zugehört, haben sie viele Partner-Fluggesellschaften - darunter Delta, Air France, KLM, Singapore Airlines, SAS, Air New Zealand, ANA, und Hawaiian. Bei diesen Airlines sammelt man nicht nur Meilen, sondern genießt auch die Statusvorteile. Auch Prämienflüge kann man bei diesen Airlines buchen. Übrigens: Fliegt man mit Virgin Atlantic einen Prämienflug, so sammelt man gleichzeitig totzdem Statusmeilen - das gibt es sonst nirgendwo!";
     }
     endresultstring += '<br><br>Andere Optionen:<br><br>'
     for(var i = 1; i < arra.length; i++){
