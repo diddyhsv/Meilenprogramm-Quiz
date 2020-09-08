@@ -151,10 +151,10 @@ function setEndingSentence() {
 	var splitresult = personalityResults.split(",");
 	var arr = calcResults(splitresult);
 	arr = arr.sort(function (a,b){
-	    if (a.slice(-3) === "100") return -1;
-        if (b.slice(-3) === "100") return 1;
-        if (a.slice(-2) > b.slice(-2)) return -1;
-        if (a.slice(-2) < b.slice(-2)) return 1;
+	    if (a.substr(0,3) === "100") return -1;
+        if (b.substr(0,3) === "100") return 1;
+        if (a.substr(0,2) > b.substr(0,2)) return -1;
+        if (a.substr(0,2) < b.substr(0,2)) return 1;
         return 0;	});
 	result = resultoutput(arr);
     document.getElementById("results_screen").className = "";
@@ -164,7 +164,7 @@ function setEndingSentence() {
 
 function resultoutput(arra){
     var endresultstring = "";
-    endresultstring += arra[0]  + '%<br><br>';
+    endresultstring += arra[0]  + '<br><br>';
     if(arra[0].includes("Flying Blue")){
         endresultstring += "Das Programm, das hauptsächlich von den SkyTeam Airlines Air France und KLM betrieben wird, ist unter anderem für die Mitglieder gut, die mit Economy-Class Kurzstrecken einen Status erfliegen wollen. Mit 48 Segmenten hat man den SkyTeam Elite Plus Status erreicht, fliegt man einige Langstrecken sind es sogar deutlich weniger Segmente. Die Airlines sind auch gut in Deutschland vertreten, und schon mit dem Silber Status gibt es auf absolut jedem SkyTeam Flug ein zusätzliches kostenloses Gepäckstück (auch im Light Tarif). Und wer auch in Zukunft viel fliegt bekommt irgendwann den Status auf Lebenszeit.";
     }else if(arra[0].includes("OK Plus")){
@@ -210,7 +210,7 @@ function resultoutput(arra){
     }
     endresultstring += '<br><br>Andere Optionen:<br><br>'
     for(var i = 1; i < arra.length; i++){
-        endresultstring += arra[i]  + '%<br>';
+        endresultstring += arra[i]  + '<br>';
     }
 
     return endresultstring;
@@ -264,28 +264,28 @@ function calcResults(res) {
             asiamiles += parseInt(res[i].slice(-2));
         }
     }
-    var lh = "Miles&More: " + milesandmore;
-    var a6 = "Aegean Miles+Bonus: " + milesandbonus;
-    var as = "Asiana Club: " + asianaclub;
-    var tk = "Turkish Airlines Miles&Smiles: " + milesandsmiles;
-    var sa = "SAS EuroBonus: " + eurobonus;
-    var af = "Flying Blue: " + flyingblue;
-    var sv = "Aeroflot Bonus: " + aeroflotbonus;
-    var ok = "OK Plus: " + okplus;
-    var az = "Alitalia MilleMiglia: " + millemiglia;
-    var dl = "Delta SkyMiles: " + skymiles;
-    var ba = "British Airways Executive Club: " + executiveclub;
-    var aa = "American Airlines AAdvantage: " + aadvantage;
-    var ay = "Finnair Plus: " + finnairplus;
-    var qa = "Qantas: " + qantas;
-    var rj = "Royal Jordanian Royal Club: " + royalclub;
-    var vz = "Virgin Flying Club: " + flyingclub;
-    var jb = "JetBlue TrueBlue: " + trueblue;
-    var no = "Norwegian Reward: " + norwegianreward;
-    var ib = "Iberia Plus: " + iberiaplus;
-    var cx = "Asia Miles: " + asiamiles;
-    var sq = "KrisFlyer: " + krisflyer;
-    var ey = "Etihad Guest: " + etihadguest;
+    var lh = milesandmore + "%: Miles&More";
+    var a6 = milesandbonus + "%: Aegean Miles+Bonus";
+    var as = asianaclub + "%: Asiana Club";
+    var tk = milesandsmiles + "%: Turkish Airlines Miles&Smiles";
+    var sa = eurobonus + "%: SAS EuroBonus";
+    var af = flyingblue + "%: Flying Blue";
+    var sv = aeroflotbonus + "%: Aeroflot Bonus";
+    var ok = okplus + "%: OK Plus";
+    var az = millemiglia + "%: Alitalia MilleMiglia";
+    var dl = skymiles + "%: Delta SkyMiles";
+    var ba = executiveclub + "%: British Airways Executive Club";
+    var aa = aadvantage + "%: American Airlines AAdvantage";
+    var ay = finnairplus + "%: Finnair Plus";
+    var qa = qantas + "%: Qantas";
+    var rj = royalclub + "%: Royal Jordanian Royal Club";
+    var vz = flyingclub + "%: Virgin Flying Club";
+    var jb = trueblue + "%: JetBlue TrueBlue";
+    var no = norwegianreward + "%: Norwegian Reward";
+    var ib = iberiaplus + "%: Iberia Plus";
+    var cx = asiamiles + "%: Asia Miles";
+    var sq = krisflyer + "%: KrisFlyer";
+    var ey = etihadguest + "%: Etihad Guest";
     var programs = [lh, a6, as, tk, sa, af, sv, ok, az, dl, ba, aa, ay, qa, rj, vz, jb, no, cx, sq, ey, ib];
     console.log(programs);
     return programs;
