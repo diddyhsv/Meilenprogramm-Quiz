@@ -8,7 +8,7 @@
 
 var currentQuestion = 2; //
 var flyingblue = okplus = asiamiles = etihadguest = krisflyer = iberiaplus = skymiles = royalclub = aadvantage = eurobonus = flyingclub = trueblue = norwegianreward = executiveclub = asianaclub = millemiglia = finnairplus = qantas = milesandbonus = milesandsmiles = aeroflotbonus = milesandmore = 0;
-
+var progints = [okplus, asiamiles, etihadguest, krisflyer, iberiaplus, skymiles, royalclub, aadvantage, eurobonus, flyingclub, trueblue, norwegianreward, executiveclub, asianaclub, millemiglia, finnairplus, qantas, milesandbonus, milesandsmiles, aeroflotbonus, milesandmore]
 /* 
 	name: startQuiz
 	desc: Removes all elements that are not needed after the
@@ -153,8 +153,8 @@ function setEndingSentence() {
 	arr = arr.sort(function (a,b){
 	    if (a.substr(0,3) === "100") return -1;
         if (b.substr(0,3) === "100") return 1;
-        if (a.substr(0,2) > b.substr(0,2)) return -1;
-        if (a.substr(0,2) < b.substr(0,2)) return 1;
+        if (parseInt(a.substr(0,2)) > parseInt(b.substr(0,2))) return -1;
+        if (parseInt(a.substr(0,2)) < parseInt(b.substr(0,2))) return 1;
         return 0;	});
 	result = resultoutput(arr);
     document.getElementById("results_screen").className = "";
@@ -262,6 +262,11 @@ function calcResults(res) {
             krisflyer += parseInt(res[i].slice(-2));
         } else if(res[i].includes("Asia Miles")){
             asiamiles += parseInt(res[i].slice(-2));
+        }
+    }
+    for(var i = 0; i < progints.length; i++){
+        if(progints[i] == 5){
+            progints[i] = '05';
         }
     }
     var lh = milesandmore + "%: Miles&More";
