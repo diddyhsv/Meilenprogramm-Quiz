@@ -156,6 +156,17 @@ html,body {
 	text-transform: uppercase;
 }
 
+.section-results {
+	position: relative;
+	padding-bottom: 15px;
+	margin: -50px 20 30px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+
+
 .section-heading:after {
 	content: "";
 	position: absolute;
