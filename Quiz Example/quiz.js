@@ -211,47 +211,47 @@ function resultoutput(arra){
     endresultstring += '<br><br>Andere Optionen:<br><br>'
     for(var i = 1; i < arra.length; i++){
         endresultstring += "<details><summary><strong>" + arra[i] + "</strong></summary>" ;
-        if(arra[0].includes("Flying Blue")){
+        if(arra[i].includes("Flying Blue")){
             endresultstring += "Das Programm, das hauptsächlich von den SkyTeam Airlines Air France und KLM betrieben wird, ist unter anderem für die Mitglieder gut, die mit Economy-Class Kurzstrecken einen Status erfliegen wollen. Mit 48 Segmenten hat man den SkyTeam Elite Plus Status erreicht, fliegt man einige Langstrecken sind es sogar deutlich weniger Segmente. Die Airlines sind auch gut in Deutschland vertreten, und schon mit dem Silber Status gibt es auf absolut jedem SkyTeam Flug ein zusätzliches kostenloses Gepäckstück (auch im Light Tarif). Und wer auch in Zukunft viel fliegt bekommt irgendwann den Status auf Lebenszeit.";
-        }else if(arra[0].includes("OK Plus")){
+        }else if(arra[i].includes("OK Plus")){
             endresultstring += "Das Programm des Tschechischen SkyTeam-Mitglieds eignet sich gut für Kurzstrecken-Economy Flieger. 30 Segmente (6 davon mit CSA) genügen für SkyTeams höchsten Status, und selbst mit dem zweithöchsten Status hätte man auf allen SkyTeam-Flügen ein kostenloses zusätzliches Freigepäckstück (auch im Light-Tarif).";
-        }else if(arra[0].includes("MilleMiglia")){
+        }else if(arra[i].includes("MilleMiglia")){
             endresultstring += "Das Programm des Italianischen SkyTeam-Mitglieds Alitalia ist unter den SkyTeam-Programmen wohl das beste für Business Class Langstrecken. Da gibt es nämlich bis zu 300% als Meilengutschrift. Außerdem ist Alitalia in Deutschland gut vertreten. Schon mit dem SkyTeam Elite Status gibt es auf jedem SkyTeam-Flug ein kostenloses zusätzliches Gepäckstück, egal in welchem Tarif. Und wer die nächsten Jahre regelmäßig viel fliegt, behält irgendwann den Status auf Lebenszeit.";
-        }else if(arra[0].includes("SkyMiles")){
+        }else if(arra[i].includes("SkyMiles")){
             endresultstring += "Das Programm der US-Amerikanischen Airline Delta ist wohl für Economy-Langstrecken-Flieger kaum zu schlagen. Selbst in der allerbilligsten Economy-Klasse sehr vieler Airlines (auch außerhalb der SkyTeam-Allianz) werden 100% der Distanz gutgeschrieben! Außerdem ist Delta (und Air France - KLM) für Flüge ab Deutschland in die USA meistens eine der günstigsten Optionen. Schon mit 2 Langstrecken an die US-Westküste hat man den Silber-Status, mit dem es auf jedem SkyTeam Flug (auch im Light/Basic-Tarif) ein kostenloses Freigepäckstück dazu gibt. Und hat man irgendwann eine Million Meilen gesammelt, gibt es einen Status auf Lebenszeit.";
-        }else if(arra[0].includes("Executive Club")){
+        }else if(arra[i].includes("Executive Club")){
             endresultstring += "Das Programm von Oneworld-Mitglied British Airways eignet sich sehr gut für regelmäßige Langstrecken-Flieger, die in einer der komfortableren Reiseklassen fliegen, auch da British Airways in Deutschland gut vertreten ist. Die gesammelten Meilen kann man auch für attraktive Flugprämien einlösen - und wenn man oft genug geflogen ist, gibt es den Status auf Lebensdauer. Auch können Kunden, die besonders viel fliegen, einen Status verschenken.";
-        }else if(arra[0].includes("AAdvantage")){
+        }else if(arra[i].includes("AAdvantage")){
             endresultstring += "Das Programm von American Airlines ist wohl das beste Oneworld-Programm für Economy Langstrecken-Flieger. Unter anderem durch die Kooperation mit British Airways ist American Airlines immer eine der Top-Optionen ab Deutschland in die USA. 4 Economy-Flüge im Standard-Economy-Tarif an die US-Westküste reichen schon für den Oneworld Sapphire Status. Und nach einer Million Meilen gibt es einen Status auf Lebenszeit!";
-        }else if(arra[0].includes("Finnair Plus")){
+        }else if(arra[i].includes("Finnair Plus")){
             endresultstring += "Das Finnische Oneworld-Mitglied betreibt ein interessantes Programm für Business Class Passagiere, denn für Business Class Flüge gibt es oft bis zu 300% der Distanz in Meilen. Finnair ist auch gut in Deutschland vertreten, und die Punkte können auch oft attraktiv eingelöst werden, besonders für Flüge im hohen Norden. Außerdem gibt es nach mehreren Jahren Treue den Status auf Lebenszeit. Platinum-Mitglieder können auch einen Gold (Oneworld Sapphire) Status verschenken.";
-        }else if(arra[0].includes("Miles+Bonus")){
+        }else if(arra[i].includes("Miles+Bonus")){
             endresultstring += "Das Griechische Star Alliance Mitglied betreibt ein Meilenprogramm mit einer sehr niedrigen Meilenhürde für den Star Alliance Gold Status. Gerade in guten Buchungsklassen sind die benötigten Meilen mit ein paar Langstrecken schnell erflogen. Die benötigten 4-6 Aegean-Flüge sollten auch kein allzu großes Problem darstellen, da Aegean die meisten Deutschen Großstädte anfliegt.";
-        }else if(arra[0].includes("Asiana Club")){
+        }else if(arra[i].includes("Asiana Club")){
             endresultstring += "Das Programm der Koreanischen Star Alliance Airline eignet sich sehr gut für regelmäßige Premium-Economy Passagiere. Fliegt man z.B. einigermaßen häufig in der Lufthansa Premium Economy erreicht man bestimmt die 40.000 Meilen, gerade da man 2 Jahre dafür Zeit hat. Danach hat man immer weitere 2 Jahre um 30.000 Meilen für die Requalifikation zu sammeln. Nach 500.000 Meilen gibt es außerdem den Star Alliance Gold Status auf Lebensdauer.";
-        }else if(arra[0].includes("Miles&Smiles")){
+        }else if(arra[i].includes("Miles&Smiles")){
             endresultstring += "Das Programm von Turkish Airlines eignet sich sehr gut für Passagiere, die auf Langstrecken zwar meistens in den komfortableren Klassen sitzen, aber halt nicht allzu oft fliegen. Bei Turkish Airlines ist nämlich die Anzahl der benötigten Meilen für den Star Alliance Gold Status niedrig, und außerdem der Status 2 Jahre lang gültig. Sammelt man einmal 80.000 Meilen innerhalb eines Jahres, gibt es den Star Alliance Gold Status sogar für 4 Jahre!";
-        }else if(arra[0].includes("EuroBonus")){
+        }else if(arra[i].includes("EuroBonus")){
             endresultstring += "Fliegt man innerhalb der Star Alliance viele Economy-Langstrecken, ist EuroBonus wohl das passendste Programm, da selbst die niedrigsten Buchungsklassen Punkte geben und als Segmente zählen. SAS ist in Deutschland gut vertreten (sowie natürlich auch die Star Alliance) und die Punkte kann man auch gut einlösen. Nach 10 Jahren behält man den Status außerdem auf Lebenszeit. Gold-Mitglieder können außerdem einen Silber-Status verschenken - Platinum-Mitglieder sogar einen Silber UND Gold Status.";
-        }else if(arra[0].includes("Miles&More")){
+        }else if(arra[i].includes("Miles&More")){
             endresultstring += "Desto höher die Reiseklasse, desto mehr lohnt sich Miles&More als Meilenprogramm. Und auch für Kurzstrecken-Passagiere ist Miles&More eine gute Option, da es mit 30 Segmenten schon Zugang zu allen Lufthansa-Lounges gibt. Außerdem hat Miles&More ein breites Netzwerk an Partner-Airlines bei denen man Meilen sammeln kann, aber auch gut einlösen kann. Da man in Deutschland auch außerhalb eines Flugzeugs viele Meilen sammeln kann, kommt man hier auch recht schnell zu einem Prämienflug, vor allem wenn man eines der Meilenschnäppchen bucht. Inzwischen gibt es auch einen Lifetime-Status, auch wenn er nicht allzu leicht zu erreichen ist. Aber auch für Passagiere in den billigsten Buchungsklassen kann Miles&More interessant sein: Fliegt man nämlich mit der Lufthansa Group in den billigen Klassen, gibt es für Statusmitglieder trotzdem noch mind. 50% der Distanz - und im neuen System (ab 2022) spielen Buchungsklassen dann überhaupt keine Rolle mehr.";
-        }else if(arra[0].includes("KrisFlyer")){
+        }else if(arra[i].includes("KrisFlyer")){
             endresultstring += "Fliegt man mit der Star Alliance viele Langstrecken ist KrisFlyer eine interessante Alternative, z.B. in Lufthansas Premium Economy. Zwar kommt man bei anderen Programmen schneller zum Status, dafür eignen sich die KrisFlyer-Meilen aber sehr gut um Prämienflüge zu buchen - vor allem mit Singapore Airlines nach Asien.";
-        }else if(arra[0].includes("Iberia Plus")){
+        }else if(arra[i].includes("Iberia Plus")){
             endresultstring += "Fliegt man mit der Oneworld-Allianz viel in der Business Class, ist Iberia Plus eine gute Option. Nicht nur sammelt man viele Meilen, sondern kann diese auch wunderbar für günstige Prämienflüge ausgeben. Die Oneworld-Allianz und Iberias Partner sind ja auch gut in Deutschland vertreten. Iberia Plus ist außerdem das einfachste Programm um einen Lifetime-Status innerhalb der Oneworld Allianz zu bekommen. ";
-        }else if(arra[0].includes("TrueBlue")){
+        }else if(arra[i].includes("TrueBlue")){
             endresultstring += "Will man viel in den USA billig fliegen, kann das Programm von JetBlue eine gute Option sein. Ihr seid nicht an eine Allianz gebunden, sondern könnt auf Flügen von Emirates, Hawaiian, Icelandair, und Singapore Airlines eure Meilen sammeln. Diese Meilen könnt ihr dann für JetBlue und Hawaiian-Flüge ausgeben. Die Meilen laufen außerdem nie ab, und auch Meilenpooling wird angeboten. Für gelegenliche Flieger, die keinen großen Wert auf einen Status legen, also eine interessante Option.";
-        }else if(arra[0].includes("Norwegian Reward")){
+        }else if(arra[i].includes("Norwegian Reward")){
             endresultstring += "Ein Programm der etwas anderen Art: Ist man hauptsächlich in Europa in der Economy Class unterwegs, könnte Norwegian eine passende Airline zum Flugverhalten sein, gerade da Norwegian ab Deutschland mehrere Ziele nonstop anfliegt. Alle 6 Norwegian-Flüge gibt es einen weiteren Vorteil - von kostenloser Sitzplatzreservierung bis hin zum kostenlosen Freigepäck. Außerdem gibt es Meilen (CashPoints), die man unkompliziert einlösen kann.";
-        }else if(arra[0].includes("Asia Miles")){
+        }else if(arra[i].includes("Asia Miles")){
             endresultstring += "Fliegt man viele Langstrecken mit Oneworld, und auch gerne mal in den komfortableren Sitzen, ist Asia Miles sowieso schon eine der guten Optionen. Zusätzlich kann man aber auch auf einigen Flügen anderer Airlines Meilen sammeln, wie z.B. Lufthansa, SWISS, Austrian, LATAM, Air Canada, Air New Zealand, Air China, etc. - Außerdem gibt es viele attraktive Einlösemöglichkeiten. Da die Meilen nie verfallen, hat man auch als gelegentlicher Flieger irgendwann mal genug Meilen für den Prämienflug. ";
-        }else if(arra[0].includes("Etihad Guest")){
+        }else if(arra[i].includes("Etihad Guest")){
             endresultstring += "Fliegt man viele Langstrecken (selbst in der Economy Class) und meidet die Bindung an eine der 3 Allianzen, kann Etihads Meilenprogramm ein angemessenes Programm sein. Schon nach 25.000 Meilen (oder 20 Segmenten) gibt es zusätzliches Freigepäck und in einigen Airports sogar Loungezugang. Besonders interessant sind aber die Optionen zum Einlösen der Meilen - besonders bei Etihads Partnerairlines. Einige Beispiele: Mit Brussels- oder American Airlines in der Business Class in die USA für 88.000-100.000 Meilen (sogar nach Alaska & Hawaii). Auch gut: Mit CSA von Prag nach Seoul für 51.220 Meilen in der Business Class.";
-        }else if(arra[0].includes("Aeroflot Bonus")){
+        }else if(arra[i].includes("Aeroflot Bonus")){
             endresultstring += "Bei dem Programm der Russischen Airline bekommt man ohne Status erstmal leicht überdurchschnittliche Meilengutschriften, aber hat man einen Status erreicht, gibt es einen ordentlichen Bonus. Hat man z.B. den Gold-Status, gibt es auf den meisten Business-Class-Flügen der SkyTeam Allianz ganze 175%. Auch gut: Schon ab dem Silber-Status (25.000 Meilen oder 25 Segmente) gibt es auf jedem SkyTeam-Flug (auch im billigsten Tarif) ein kostenloses zusätzliches Gepäckstück.";
-        }else if(arra[0].includes("Royal Club")){
+        }else if(arra[i].includes("Royal Club")){
             endresultstring += "Fliegt man viele Oneworld-Langstrecken, bietet Royal Jordanien ein gutes Programm an. Mit 65.000 Meilen erreicht man nämlich den Emerald-Status, u.a. mit First-Class-Loungezugang! Außerdem gibt es bei Flügen mit vielen Airlines 50% der Distanz in der Economy Class, und ganze 150% in der Business Class. Ein weitere Pluspunkt: Die Meilen verfallen nie.";
-        }else if(arra[0].includes("Flying Club")){
+        }else if(arra[i].includes("Flying Club")){
             endresultstring += "Will man sich überhaupt nicht an eine Allianz binden, ist der Flying Club eine Alternative. Da Virgin Atlantic selber keiner Allianz zugehört, haben sie viele Partner-Fluggesellschaften - darunter Delta, Air France, KLM, Singapore Airlines, SAS, Air New Zealand, ANA, und Hawaiian. Bei diesen Airlines sammelt man nicht nur Meilen, sondern genießt auch die Statusvorteile. Auch Prämienflüge kann man bei diesen Airlines buchen. Übrigens: Fliegt man mit Virgin Atlantic einen Prämienflug, so sammelt man gleichzeitig totzdem Statusmeilen - das gibt es sonst nirgendwo!";
         }
         endresultstring += "</details><br>"
